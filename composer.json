@@ -1,0 +1,38 @@
+{  "name": "barkane-arts/website",
+    "description": "Website for barkane-arts.com",
+    "license": "GPL3",
+    "authors": [
+        {
+            "name": "Soatok Dreamseeker",
+            "role": "Developer",
+            "homepage": "https://twitter.com/SoatokDhole"
+        }
+    ],
+    "keywords": ["microframework", "rest", "router", "psr7"],
+    "homepage": "http://github.com/slimphp/Slim-Skeleton",
+    "require": {
+        "php": "^7.1",
+        "monolog/monolog": "^1.17",
+        "slim/slim": "^3.1",
+        "slim/php-view": "^2.0",
+        "twig/twig": "^2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6",
+        "vimeo/psalm": "^0|^1"
+    },
+    "autoload": {
+        "psr-4": {
+            "BarkaneArts\\Website\\": "src/BarkaneArts/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+	"scripts": {
+        "start": "php -S 0.0.0.0:8080 -t public public/index.php",
+        "test": "phpunit"
+	}
+}
