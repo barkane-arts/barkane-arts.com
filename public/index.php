@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 if (PHP_SAPI == 'cli-server') {
     // To help the built-in PHP dev server, check if the request was actually for
     // something which should probably be served as a static file
@@ -9,22 +11,24 @@ if (PHP_SAPI == 'cli-server') {
     }
 }
 
-require __DIR__ . '/../vendor/autoload.php';
+define('BARKANE_ROOT', \dirname(__DIR__));
+
+require BARKANE_ROOT . '/vendor/autoload.php';
 
 session_start();
 
 // Instantiate the app
-$settings = require __DIR__ . '/../src/settings.php';
+$settings = require BARKANE_ROOT . '/src/settings.php';
 $app = new \Slim\App($settings);
 
 // Set up dependencies
-require __DIR__ . '/../src/dependencies.php';
+require BARKANE_ROOT . '/src/dependencies.php';
 
 // Register middleware
-require __DIR__ . '/../src/middleware.php';
+require BARKANE_ROOT . '/src/middleware.php';
 
 // Register routes
-require __DIR__ . '/../src/routes.php';
+require BARKANE_ROOT . '/src/routes.php';
 
 // Run app
 $app->run();

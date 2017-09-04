@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Soatok's Space</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <style type="text/css">{% include "user/soatok/css.twig" %}</style>
+    </head>
+    <body>
+        <div id="container" class="container">
+            <h2>Soatok Dreamseeker</h2>
+            <p class="text-center">
+                <img class="img-responsive" src="/static/images/soatok_twitter.png" alt="Soatok Dreamseeker" />
+            </p>
+            <div class="table table-bordered table-responsive">
+                <table class="table">
+                    <tr>
+                        <th class="text-right">Species:</th>
+                        <td><a href="https://en.wikipedia.org/wiki/Dhole">Dhole</a> (<em>Cuon Alpinus</em>)</td>
+                    </tr>
+                    <tr>
+                        <th class="text-right">Social Media:</th>
+                        <td>
+                            <ul>
+                                <li>Github: <a href="https://github.com/soatok">soatok</a></li>
+                                <li>Telegram: <a href="https://t.me/IND_CCA3_Insecure">@IND_CCA3_Insecure</a></li>
+                                <li>Twitter: <a href="https://twitter.com/SoatokDhole">@SoatokDhole</a></li>
+                                {% if extra matches "#^after\-dark#" %}
+                                    <li>After Dark Twitter: <a href="https://twitter.com/DarkSoatok">@DarkSoatok</a></li>
+                                {% endif %}
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    </body>
+</html>
